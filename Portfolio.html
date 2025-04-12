@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Satori - IT Startup & Business Service HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Satori - IT Startup & Business Service HTML Template">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+   
+    <style>
+        /* Enable Hover Dropdown */
+        .navbar .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        /* Keep Hover Menu Above Everything */
+        .navbar .dropdown-menu {
+            z-index: 1050;
+        }
+
+        /* Fade Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Background Image */
+        .bg-custom {
+            background-image: url('assets/img/image/BG.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 300px;
+        }
+
+        /* Margin Top for Navbar */
+        .section-margin {
+            margin-top: 80px; /* Adjust based on navbar height */
+        }
+
+                   /* Navbar links default style */
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active {
+    color: black !important; /* Default text color */
+    font-weight: bold; /* Make text bold */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Navbar links hover effect */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active:hover {
+    color: blue !important; /* Hover text color */
+}
+
+/* Dropdown menu background */
+.dropdown-menu {
+    background-color: #5764ec !important; /* Light gray background */
+    border: none; /* Optional: remove border */
+}
+
+/* Dropdown items default style */
+.dropdown-menu .dropdown-item {
+    color: black !important; /* Default text color */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Dropdown items hover effect */
+.dropdown-menu .dropdown-item:hover {
+    color: rgb(10, 10, 10) !important; /* Change text color on hover */
+    background-color: #e0e0e0 !important; /* Light gray background on hover */
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand js-scroll" href="index.html">
+                <img src="assets/img/iflex logo/logo.png" class="black-logo" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarDefault">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about-us.html">About Us</a></li>
+
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="services1.html">Website Development</a></li>
+                            <li><a class="dropdown-item" href="services2.html">Website Design</a></li>
+                            <li><a class="dropdown-item" href="services3.html">Mobile App Development</a></li>
+                            <li><a class="dropdown-item" href="services4.html">Digital Marketing</a></li>
+                            <li><a class="dropdown-item" href="services5.html">Web Hosting</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Pricing Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" id="pricingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pricing</a>
+                        <ul class="dropdown-menu" aria-labelledby="pricingDropdown">
+                            <li><a class="dropdown-item" href="pricing1.html">SEO Package</a></li>
+                            <li><a class="dropdown-item" href="pricing2.html">SMO Package</a></li>
+                            <li><a class="dropdown-item" href="pricing3.html">Design/Development Packages</a></li>
+                           
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
+
+                    <!-- Support Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="supportDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Support</a>
+                        <ul class="dropdown-menu" aria-labelledby="supportDropdown">
+                            <li><a class="dropdown-item" href="support1.html">Salesforce Support & Services</a></li>
+                            <li><a class="dropdown-item" href="support2.html">Web Hosting Support & Services</a></li>
+                            <li><a class="dropdown-item" href="support3.html">Web Development Support/Services</a></li>
+                            <li><a class="dropdown-item" href="support4.html">Data Migration Support</a></li>
+                            <li><a class="dropdown-item" href="support5.html">Cloud Support (AWS, Azure, Google Cloud)</a></li>
+                            <li><a class="dropdown-item" href="support6.html">API Integration Support</a></li>
+                            <li><a class="dropdown-item" href="support7.html">CMS Support Services</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link js-scroll" href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Start Home Section -->
+    <section class="section-margin">
+        <div class="container-fluid">
+            <div class="row justify-content-evenly text-center overflow-hidden" style="height: 300px;">
+                <div class="col-md text-white d-flex flex-column align-items-center justify-content-center rounded-4 p-4 bg-custom">
+                    <h1 class="fw-bold text-white">Portfolio</h1>
+                    <nav class="mt-2">
+                        <a href="index.html" class="text-white">Home</a> > 
+                        <a class="active text-white" href="#">Portfolio</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Home Section -->
+
+      <!-- Start portfolio Section -->
+   
+     <!-- start of portfolio-area -->
+    <div class="portfolio-area content-area-2 ">
+
+        <!-- start of container-fluid -->
+        <div class="container-fluid  text-center">
+
+            <div class="main-title mt-5 mb-5 ">
+                <h1><span>Our</span> Portfolio</h1>
+                <ul class="list-inline listing filters" id="portfolioFilters">
+                    <li class="active btn filtr-button" data-filter="all">All</li>
+                    <li class="btn filtr-button" data-filter="1">Development</li>
+                    <li class="btn filtr-button" data-filter="2">Design</li>
+                    <li class="btn filtr-button" data-filter="3">SEO</li>
+                    <li class="btn filtr-button" data-filter="4">Mobile App</li>
+                </ul>
+            </div>
+               
+            <!-- start of row -->
+            <div class="row filter-portfolio mb-5" id="portfolioItems">
+
+                    <!-- Portfolio Item Start -->
+
+                   <!-- Repeat the above structure for each portfolio item -->
+                <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="3">
+                        <div class="property-box">
+                            <div class="property-thumbnail">
+                                <a href="assets/img/portfolio/img-1.jpg" class="property-img" target="_blank">
+                                    <img src="assets/img/portfolio/img-1.jpg" alt="portfolio" class="img-fluid">
+                                </a>
+                                <div class="property-overlay">
+                                    <a href="#" class="overlay-link">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <div class="property-magnify-gallery">
+                                        <a href="assets/img/portfolio/img-1.jpg" class="overlay-link" data-lightbox="portfolio">
+                                            <i class="fa fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                     <!-- Repeat the above structure for each portfolio item -->    
+                     <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="2">
+                        <div class="property-box">
+                            <div class="property-thumbnail">
+                                <a href="assets/img/portfolio/img-2.jpg" class="property-img" target="_blank">
+                                    <img src="assets/img/portfolio/img-2.jpg" alt="portfolio" class="img-fluid">
+                                </a>
+                                <div class="property-overlay">
+                                    <a href="#" class="overlay-link">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <div class="property-magnify-gallery">
+                                        <a href="assets/img/portfolio/img-2.jpg" class="overlay-link" data-lightbox="portfolio">
+                                            <i class="fa fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 <!-- Repeat the above structure for each portfolio item -->    
+                 <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="1">
+                    <div class="property-box">
+                        <div class="property-thumbnail">
+                            <a href="assets/img/portfolio/img-3.jpg" class="property-img" target="_blank">
+                                <img src="assets/img/portfolio/img-3.jpg" alt="portfolio" class="img-fluid">
+                            </a>
+                            <div class="property-overlay">
+                                <a href="#" class="overlay-link">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <div class="property-magnify-gallery">
+                                    <a href="assets/img/portfolio/img-3.jpg" class="overlay-link" data-lightbox="portfolio">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+     <!-- Repeat the above structure for each portfolio item -->    
+                <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="3">
+                    <div class="property-box">
+                        <div class="property-thumbnail">
+                            <a href="assets/img/portfolio/img-4.jpg" class="property-img" target="_blank">
+                                <img src="assets/img/portfolio/img-4.jpg" alt="portfolio" class="img-fluid">
+                            </a>
+                            <div class="property-overlay">
+                                <a href="#" class="overlay-link">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <div class="property-magnify-gallery">
+                                    <a href="assets/img/portfolio/img-4.jpg" class="overlay-link" data-lightbox="portfolio">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+     <!-- Repeat the above structure for each portfolio item -->    
+                <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="2">
+                    <div class="property-box">
+                        <div class="property-thumbnail">
+                            <a href="assets/img/portfolio/img-5.jpg" class="property-img" target="_blank">
+                                <img src="assets/img/portfolio/img-5.jpg" alt="portfolio" class="img-fluid">
+                            </a>
+                            <div class="property-overlay">
+                                <a href="#" class="overlay-link">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <div class="property-magnify-gallery">
+                                    <a href="assets/img/portfolio/img-5.jpg" class="overlay-link" data-lightbox="portfolio">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the above structure for each portfolio item -->    
+                <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="3">
+                    <div class="property-box">
+                        <div class="property-thumbnail">
+                            <a href="assets/img/portfolio/img-6.jpg" class="property-img" target="_blank">
+                                <img src="assets/img/portfolio/img-6.jpg" alt="portfolio" class="img-fluid">
+                            </a>
+                            <div class="property-overlay">
+                                <a href="#" class="overlay-link">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <div class="property-magnify-gallery">
+                                    <a href="assets/img/portfolio/img-6.jpg" class="overlay-link" data-lightbox="portfolio">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the above structure for each portfolio item -->    
+                <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="1">
+                    <div class="property-box">
+                        <div class="property-thumbnail">
+                            <a href="assets/img/portfolio/img-7.jpg" class="property-img" target="_blank">
+                                <img src="assets/img/portfolio/img-7.jpg" alt="portfolio" class="img-fluid">
+                            </a>
+                            <div class="property-overlay">
+                                <a href="#" class="overlay-link">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <div class="property-magnify-gallery">
+                                    <a href="assets/img/portfolio/img-7.jpg" class="overlay-link" data-lightbox="portfolio">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+     <!-- Repeat the above structure for each portfolio item -->    
+                <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="2">
+                    <div class="property-box">
+                        <div class="property-thumbnail">
+                            <a href="assets/img/portfolio/img-8.jpg" class="property-img" target="_blank">
+                                <img src="assets/img/portfolio/img-8.jpg" alt="portfolio" class="img-fluid">
+                            </a>
+                            <div class="property-overlay">
+                                <a href="#" class="overlay-link">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <div class="property-magnify-gallery">
+                                    <a href="assets/img/portfolio/img-8.jpg" class="overlay-link" data-lightbox="portfolio">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the above structure for each portfolio item -->    
+                <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="1">
+                    <div class="property-box">
+                        <div class="property-thumbnail">
+                            <a href="assets/img/portfolio/img-9.jpg" class="property-img" target="_blank">
+                                <img src="assets/img/portfolio/img-9.jpg" alt="portfolio" class="img-fluid">
+                            </a>
+                            <div class="property-overlay">
+                                <a href="#" class="overlay-link">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <div class="property-magnify-gallery">
+                                    <a href="assets/img/portfolio/img-9.jpg" class="overlay-link" data-lightbox="portfolio">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the above structure for each portfolio item -->    
+                <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="3">
+                    <div class="property-box">
+                        <div class="property-thumbnail">
+                            <a href="assets/img/portfolio/img-10.jpg" class="property-img" target="_blank">
+                                <img src="assets/img/portfolio/img-10.jpg" alt="portfolio" class="img-fluid">
+                            </a>
+                            <div class="property-overlay">
+                                <a href="#" class="overlay-link">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <div class="property-magnify-gallery">
+                                    <a href="assets/img/portfolio/img-10.jpg" class="overlay-link" data-lightbox="portfolio">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Repeat the above structure for each portfolio item -->    
+            <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="2">
+                <div class="property-box">
+                    <div class="property-thumbnail">
+                        <a href="assets/img/portfolio/img-11.jpg" class="property-img" target="_blank">
+                            <img src="assets/img/portfolio/img-11.jpg" alt="portfolio" class="img-fluid">
+                        </a>
+                        <div class="property-overlay">
+                            <a href="#" class="overlay-link">
+                                <i class="fa fa-link"></i>
+                            </a>
+                            <div class="property-magnify-gallery">
+                                <a href="assets/img/portfolio/img-11.jpg" class="overlay-link" data-lightbox="portfolio">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- Repeat the above structure for each portfolio item -->    
+                <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="2">
+                    <div class="property-box">
+                        <div class="property-thumbnail">
+                            <a href="assets/img/portfolio/img-12.jpg" class="property-img" target="_blank">
+                                <img src="assets/img/portfolio/img-12.jpg" alt="portfolio" class="img-fluid">
+                            </a>
+                            <div class="property-overlay">
+                                <a href="#" class="overlay-link">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <div class="property-magnify-gallery">
+                                    <a href="assets/img/portfolio/img-12.jpg" class="overlay-link" data-lightbox="portfolio">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Repeat the above structure for each portfolio item -->    
+            <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="2">
+                <div class="property-box">
+                    <div class="property-thumbnail">
+                        <a href="assets/img/portfolio/img-13.jpg" class="property-img" target="_blank">
+                            <img src="assets/img/portfolio/img-13.jpg" alt="portfolio" class="img-fluid">
+                        </a>
+                        <div class="property-overlay">
+                            <a href="#" class="overlay-link">
+                                <i class="fa fa-link"></i>
+                            </a>
+                            <div class="property-magnify-gallery">
+                                <a href="assets/img/portfolio/img-13.jpg" class="overlay-link" data-lightbox="portfolio">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- Repeat the above structure for each portfolio item -->
+    
+                <div class="col-lg-3 col-md-4 col-sm-6 col-pad filtr-item" data-category="4">
+                    <div class="property-box">
+                        <div class="property-thumbnail">
+                            <a href="assets/img/portfolio/img-14.jpg" class="property-img" target="_blank">
+                                <img src="assets/img/portfolio/img-14.jpg" alt="portfolio" class="img-fluid">
+                            </a>
+                            <div class="property-overlay">
+                                <a href="#" class="overlay-link">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <div class="property-magnify-gallery">
+                                    <a href="assets/img/portfolio/img-14.jpg" class="overlay-link" data-lightbox="portfolio">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <!-- Portfolio Item End -->
+            </div>
+             <!-- End of row -->
+        </div>
+         <!-- End of container-fluid -->
+    </div> 
+    <!-- End of portfolio-area -->
+
+     <!-- End portfolio Section -->   
+
+    <!-- Footer Section -->
+    <footer class="footer-area">
+        <div class="footer-top-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-box-item">
+                        <div class="footer-content">
+                            <img src="assets/img/iflex logo/logo.png" alt="Brand">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <ul class="footer-social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-box-item">
+                        <div class="footer-content mid-content">
+                            <h3>Useful Links</h3>
+                            <ul class="footer-link">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="Contact.html">Contact Us</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-box-item">
+                        <div class="footer-content">
+                            <h3>Contact Us</h3>
+                            <ul class="footer-link">
+                                <li><i class="fa fa-phone"></i><a href="tel:503777505">+001 503 777 505</a></li>
+                                <li><i class="fa fa-envelope"></i><a href="mailto:contact@example.com">info@iflexinfosolution.com</a></li>
+                                <li><i class="fa fa-home"></i> CA 560 Bush St & 20th Ave, Canada.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <!-- Back to Top -->
+    <div class="back-to-top">
+        <i class="fa fa-caret-up"></i><i class="fa fa-caret-up"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Bootstrap JS (CDN Only) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Fix Dropdowns on Hover -->
+ <!-- Filtering Script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".filtr-button");
+        const items = document.querySelectorAll(".filtr-item");
+        
+        buttons.forEach(button => {
+            button.addEventListener("click", function () {
+                const filter = this.getAttribute("data-filter");
+                
+                buttons.forEach(btn => btn.classList.remove("active"));
+                this.classList.add("active");
+                
+                items.forEach(item => {
+                    if (filter === "all" || item.getAttribute("data-category") === filter) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+<!-- Fix Bootstrap Dropdown Hover -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('.dropdown-toggle').forEach(dropdown => {
+            new bootstrap.Dropdown(dropdown);
+        });
+    });
+</script>
+</body>
+</html>

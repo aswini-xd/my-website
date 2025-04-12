@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Satori - IT Startup & Business Service HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Satori - IT Startup & Business Service HTML Template">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Bootstrap CSS (Only CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    
+    <style>
+        /*  Enable Hover Dropdown */
+        .navbar .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        /*  Keep Hover Menu Above Everything */
+        .navbar .dropdown-menu {
+            z-index: 1050;
+        }
+
+        /*  Fade Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+.counters {
+        background: #f8f9fa; /* Light background */
+        padding: 50px 0;
+    }
+    .counter-box {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .counter-box:hover {
+        transform: translateY(-5px);
+    }
+    .counter-box i {
+        font-size: 40px;
+        color: #007bff;
+        margin-bottom: 10px;
+    }
+    .counter {
+        font-size: 40px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    h5 {
+        font-size: 18px;
+        font-weight: 500;
+        color: #555;
+    }
+
+    .bg-custom {
+            background-image: url('assets/img/image/mobile-dev.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 300px;
+        }
+
+        /* Margin Top for Navbar */
+        .section-margin {
+            margin-top: 80px; /* Adjust based on navbar height */
+        }
+
+    /*flip box */
+    .flip-box {
+    background-color: transparent;
+    width: 100%;
+    height: 150px;
+    perspective: 1000px;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #0dcaf0; /* Bootstrap info color */
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.flip-box-front {
+    background-color: #5764ec;
+    color: white;
+}
+
+.flip-box-back {
+    background-color: white;
+    color: #5764ec;
+    transform: rotateY(180deg);
+}
+                 /* Navbar links default style */
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active {
+    color: black !important; /* Default text color */
+    font-weight: bold; /* Make text bold */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Navbar links hover effect */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active:hover {
+    color: blue !important; /* Hover text color */
+}
+
+/* Dropdown menu background */
+.dropdown-menu {
+    background-color: #5764ec !important; /* Light gray background */
+    border: none; /* Optional: remove border */
+}
+
+/* Dropdown items default style */
+.dropdown-menu .dropdown-item {
+    color: black !important; /* Default text color */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Dropdown items hover effect */
+.dropdown-menu .dropdown-item:hover {
+    color: rgb(10, 10, 10) !important; /* Change text color on hover */
+    background-color: #e0e0e0 !important; /* Light gray background on hover */
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar start-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+        <div class="container" >
+            <a class="navbar-brand js-scroll" href="index.html">
+                <img src="assets/img/iflex logo/logo.png" class="black-logo" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarDefault">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about-us.html">About Us</a></li>
+
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="services1.html">Website Development</a></li>
+                            <li><a class="dropdown-item" href="services2.html">Website Design</a></li>
+                            <li><a class="dropdown-item" href="services3.html">Mobile App Development</a></li>
+                            <li><a class="dropdown-item" href="services4.html">Digital Marketing</a></li>
+                            <li><a class="dropdown-item" href="services5.html">Web Hosting</a></li>
+							
+                        </ul>
+                    </li>
+					<!-- Pricing Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="pricingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Pricing</a>
+                        <ul class="dropdown-menu" aria-labelledby="pricingDropdown">
+                            <li><a class="dropdown-item" href="pricing1.html">SEO Package</a></li>
+                            <li><a class="dropdown-item" href="pricing2.html">SMO Package</a></li>
+                            <li><a class="dropdown-item" href="pricing3.html">Design/Development Packages</a></li>
+                            
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
+
+					<!-- Support Dropdown -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle active" href="#" id="supportDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Support</a>
+						<ul class="dropdown-menu" aria-labelledby="supportDropdown">
+							<li><a class="dropdown-item" href="support1.html">Salesforce Support & Services</a></li>
+							<li><a class="dropdown-item" href="support2.html">Web Hosting Support & Services</a></li>
+							<li><a class="dropdown-item" href="support3.html">Web Development Support/Services</a></li>
+							<li><a class="dropdown-item" href="support4.html">Data Migration Support</a></li>
+							<li><a class="dropdown-item" href="support5.html">Cloud Support (AWS, Azure, Google Cloud)</a></li>
+							<li><a class="dropdown-item" href="support6.html">API Integration Support</a></li>
+							<li><a class="dropdown-item" href="support7.html">CMS Support Services</a></li>
+						</ul>
+					</li>
+
+                    <li class="nav-item"><a class="nav-link js-scroll" href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ <!-- Navbar End-->
+  
+    <!-- Start Home Section -->
+     
+    <section class="section-margin">
+        <div class="container-fluid">
+            <div class="row justify-content-evenly text-center overflow-hidden" style="height: 300px;">
+                <div class="col-md text-white d-flex flex-column align-items-center justify-content-center rounded-4 p-4 bg-custom">
+                    <h1 class="fw-bold text-white">Mobile App Development</h1>
+                    <nav class="mt-2">
+                        <a href="index.html" class="text-white">Home</a> > 
+                        <a class="active text-white" href="#">Mobile App Development</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- End Home Section -->
+
+    <!-- Start About Section -->
+    <section id="about" class="about-area section-padding">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="about-image-wrapper">
+                        <img src="assets/img/image/mobile-app-development-2.webp" class="rounded-4" alt="app Development image">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="about-content">
+                        <div class="about-content-text">
+                            <h2>Mobile App Development</h2> 
+                            <h3>Transforming Ideas into Powerful Mobile Experiences.</h3>
+                            <p>At iFlexSolutions, we specialize in crafting high-quality mobile applications that drive user engagement and business growth. Whether you need an Android, iOS, or cross-platform app, our expert developers create scalable and feature-rich solutions tailored to your needs.</p>
+                            <a class="button" >Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- End About Section -->
+
+   <!-- Android Section -->
+   <section id="android" class="android-area ">
+    
+    <div class="container">
+        
+        <div class="row d-flex align-items-center">
+            <h1 class="fw-bold text-center mb-5 text-primary">our services</h1>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="android-content">
+                    <div class="android-content-text">
+                        <h2 class="fw-bold">Android App Development</h2> 
+                        <h3>What is Android App Development?</h3>
+                        <p>Android app development is the process of creating applications for devices running the Android operating system. Developers use programming languages like Java and Kotlin along with tools such as Android Studio and Firebase to build functional and engaging mobile applications.</p>
+                        <h3 class="fw-medium">Key Features of Android Development</h3>
+                       <ul>
+                        <li>
+                            <h5>Open-Source Platform:-</h5>
+                            <p>Android is based on an open-source framework, making it highly customizable.</p>
+                        </li>
+                        <li>
+                            <h5>Wide Device Compatibility:-</h5>
+                            <p> Apps can run on a variety of Android devices, including smartphones, tablets, and smart TVs.</p>
+                        </li>
+                        <li>
+                            <h5>Google Play Store Integration:-</h5>
+                            <p>Seamlessly distribute apps to millions of users via the Google Play Store.</p>
+                        </li>
+                        <li>
+                            <h5>Rich UI Components:-</h5>
+                            <p>Android provides flexible UI components and design guidelines for a seamless user experience</p>
+                        </li>
+                        <li>
+                            <h5>Powerful APIs & Libraries:-</h5>
+                            <p>Access built-in services like GPS, camera, and machine learning</p>
+                        </li>
+                       </ul>
+                        <a class="button">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="android-image-wrapper">
+                    <img src="assets/img/image/Android-App.jpg" class="rounded-pill" alt="android Development image">
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+    <!-- End Android Section -->
+
+    <!-- IOS Section -->
+    <section id="IOS" class="IOS-area section-padding">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6 col-md-12 col-sm-12 ">
+                    <div class="IOS-image-wrapper ">
+                        <img src="assets/img/image/ios-app.webp" class="rounded-pill" alt="IOS Development image">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="IOS-content">
+                        <div class="IOS-content-text">
+                            <h2 class="fw-bold">IOS App Development</h2> 
+                            <h3>Build Powerful and Intuitive iOS Applications</h3>
+                            <p>iOS app development empowers businesses and individuals to create seamless, high-performance applications for Apple devices, including iPhones, iPads, and Apple Watches. With a focus on user experience, security, and cutting-edge features, developing for iOS offers unparalleled opportunities to reach millions of users globally.</p>
+                            <h3 class="fw-medium">Why Choose iOS for App Development?</h3>
+                            <ul>
+                                <li>
+                                    <h5>High Performance & Security:</h5>
+                                    <p>Apple’s ecosystem ensures smooth performance, robust security, and data privacy.</p>
+                                </li>
+                                <li>
+                                    <h5>Loyal User Base:</h5>
+                                    <p>iOS users are known for high engagement and willingness to spend on premium applications.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5>Seamless Ecosystem Integration:</h5>
+                                    <p>Build apps that work across iPhones, iPads, Apple Watches, and Macs.</p>
+                                </li>
+                            </ul>
+                            <a class="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- End IOS Section -->
+
+    <!-- Hybrid Section -->
+    <section id="Hybrid" class="Hybrid-area section-padding">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+            
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="Hybrid-content">
+                        <div class="Hybrid-content-text">
+                            <h2 class="fw-bold">Hybrid Development</h2> 
+                            <h3>The Best of Both Worlds</h3>
+                            <p>In today's fast-paced digital landscape, businesses need mobile applications that offer high performance, seamless user experience, and cost efficiency. Hybrid development combines the best of native and web applications, allowing developers to build cross-platform apps using a single codebase.</p>
+                            <h3 class="fw-medium">Why Choose Hybrid Development?</h3>
+                            <ul>
+                                <li>
+                                    <h5>Cross-Platform Compatibility</h5>
+                                    <p>Develop once and deploy on both iOS and Android.</p>
+                                </li>
+                                <li>
+                                    <h5>Cost-Effective</h5>
+                                    <p>Save time and resources by using a single codebase for multiple platforms.</p>
+                                </li>
+                                <li>
+                                    <h5>Faster Development</h5>
+                                    <p>Reduce time-to-market with streamlined development processes.</p>
+                                </li>
+                                <li>
+                                    <h5>Easy Maintenance</h5>
+                                    <p>Update and manage apps efficiently without platform-specific modifications.</p>
+                                </li>
+                                <li>
+                                    <h5>Access to Native Features</h5>
+                                    <p>Utilize device capabilities like camera, GPS, and notifications through frameworks like Ionic, React Native, and Flutter.</p>
+                                </li>
+                            </ul>
+                            <a class="button" >Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="Hybrid-image-wrapper">
+                        <img src="assets/img/image/hybrid-app.jpg" class="rounded-pill" alt="Hybrid Development image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hybrid Section -->
+
+        <!-- UI/UX Design Section -->
+    <section id="UI" class="UI-area section-padding">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6 col-md-12 col-sm-12 ">
+                    <div class="UI-image-wrapper ">
+                        <img src="assets/img/image/UI-UX.jpg" class="rounded-pill" alt="UI/UX Design image">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="UI-content">
+                        <div class="UI-content-text">
+                            <h2 class="fw-bold">UI/UX Design</h2> 
+                            <h3>Crafting Seamless & Engaging User Experiences</h3>
+                            <p>At the heart of every great product is a user-centered design. Our UI/UX design approach focuses on aesthetics, usability, and functionality to ensure intuitive and enjoyable experiences for your users.
+                            </p>
+                            <h3 class="fw-medium">What We Offer?</h3>
+                            <ul>
+                                <li>
+                                    <h5>User Research & Analysis</h5>
+                                    <p>Understanding your audience to design solutions that meet their needs.</p>
+                                </li>
+                                <li>
+                                    <h5> Wireframing & Prototyping</h5>
+                                    <p>Visualizing the user journey with interactive mockups.</p>
+                                </li>
+                                <li>
+                                    <h5>Responsive UI Design</h5>
+                                    <p>Ensuring a consistent experience across all devices.</p>
+                                </li>
+                                <li>
+                                    <h5>User Testing & Feedback</h5>
+                                    <p>Refining designs based on real user interactions.</p>
+                                </li>
+                                <li>
+                                    <h5>Accessibility & Usability Optimization</h5>
+                                    <p>Making designs inclusive and easy to navigate.</p>
+                                </li>
+                            </ul>
+                            <a class="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- End UI/UX Design Section -->
+
+    <!--  App Maintenance & Support Section -->
+    <section id="App" class="App section-padding">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+            
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="App-content">
+                        <div class="App-content-text">
+                            <h2 class="fw-bold">App Maintenance & Support</h2> 
+                            <p>Keeping your app running smoothly is essential for user satisfaction and business success. Our App Maintenance & Support services ensure your application remains up-to-date, secure, and fully functional.</p>
+                            <h3 class="fw-medium">Our Services Include</h3>
+                            <ul>
+                                <li>
+                                    <h5>Bug Fixes & Troubleshooting</h5>
+                                    <p>Swift resolution of any issues affecting app performance.</p>
+                                </li>
+                                <li>
+                                    <h5>Security Updates</h5>
+                                    <p>Regular patches to protect against vulnerabilities.</p>
+                                </li>
+                                <li>
+                                    <h5>Performance Optimization</h5>
+                                    <p>Enhancing speed, stability, and efficiency.</p>
+                                </li>
+                                <li>
+                                    <h5>Feature Enhancements</h5>
+                                    <p>Adding new functionalities to meet evolving user needs.</p>
+                                </li>
+                                <li>
+                                    <h5>OS & Device Compatibility</h5>
+                                    <p>Ensuring seamless operation across the latest platforms.</p>
+                                </li>
+                                <li>
+                                    <h5>24/7 Monitoring & Support</h5>
+                                    <p>Proactive monitoring and real-time assistance.</p>
+                                </li>
+                            </ul>
+                            <a class="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="App-image-wrapper">
+                        <img src="assets/img/image/App Maintenance.png" class="rounded-pill" alt="App Maintenance image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- End  App Maintenance & Support Section -->
+ 
+        <!--start tech section-->
+        <section class="container mb-5">
+            <h2 class="fw-bold text-center text-primary">Technologies We Use</h2>
+            <div class="row justify-content-evenly text-center mt-3 fw-bold">
+                
+                <!-- Flip Box 1 -->
+                <div class="col-md-2 m-1">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <h4>Languages</h4>
+                            </div>
+                            <div class="flip-box-back">
+                                <ul>
+                                    <li>Swift</li>
+                                    <li>Kotlin</li>
+                                    <li>Java</li>
+                                    <li>Dart</li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Flip Box 2 -->
+                <div class="col-md-2 m-1">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <h4>Frameworks</h4>
+                            </div>
+                            <div class="flip-box-back">
+                                <ul>
+                                    <li>Flutter</li>
+                                    <li>React Native</li>
+                                    <li>Xamarin</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Flip Box 3 -->
+                <div class="col-md-2 m-1">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <h4>Databases</h4>
+                            </div>
+                            <div class="flip-box-back">
+                                <ul>
+                                    <li>Firebase</li>
+                                    <li>MySQL</li>
+                                    <li>MongoDB</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Flip Box 4 -->
+                <div class="col-md-2 m-1">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <h4>Cloud Services</h4>
+                            </div>
+                            <div class="flip-box-back">
+                                <ul>
+                                    <li>AWS</li>
+                                    <li>Google Cloud</li>
+                                    <li>Azure</li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+        
+        
+        <!--start tech section-->
+    <!--start faq section-->
+    <section class="container mb-4">
+        <div class="row justify-content-evenly pt-3 pb-3">
+            <div class="col-md-10 border" style="background-color: #555;">
+                <h2 class="text-center fw-bold text-white">FAQ</h2>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          Accordion Item #1
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          Accordion Item #2
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                          Accordion Item #3
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Accordion Item #4
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            Accordion Item #5
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                            Accordion Item #6
+                          </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                            Accordion Item #7
+                          </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+       <!--End Faq Section -->
+
+    <!-- Footer Section -->
+    <footer class="footer-area">
+        <div class="footer-top-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-box-item">
+                        <div class="footer-content">
+                            <img src="assets/img/iflex logo/logo.pngg" alt="Brand">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <ul class="footer-social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-box-item">
+                        <div class="footer-content mid-content">
+                            <h3>Useful Links</h3>
+                            <ul class="footer-link">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="Contact.html">Contact Us</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-box-item">
+                        <div class="footer-content">
+                            <h3>Contact Us</h3>
+                            <ul class="footer-link">
+                                <li><i class="fa fa-phone"></i><a href="tel:503777505">+001 503 777 505</a></li>
+                                <li><i class="fa fa-envelope"></i><a href="mailto:contact@example.com">info@iflexinfosolution.com</a></li>
+                                <li><i class="fa fa-home"></i> CA 560 Bush St & 20th Ave, Canada.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <!-- Back to Top -->
+    <div class="back-to-top">
+        <i class="fa fa-caret-up"></i><i class="fa fa-caret-up"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Bootstrap JS (CDN Only) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+ <!-- Fix Dropdowns on Hover -->
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var dropdowns = document.querySelectorAll('.dropdown-toggle');
+        dropdowns.forEach(function (dropdown) {
+            new bootstrap.Dropdown(dropdown);
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const counters = document.querySelectorAll('.counter');
+        const speed = 100; // Lower = faster
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    });
+</script>
+</body>
+</html>

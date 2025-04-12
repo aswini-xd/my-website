@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Satori - IT Startup & Business Service HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Satori - IT Startup & Business Service HTML Template">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Bootstrap CSS (Only CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    
+    <style>
+        /*  Enable Hover Dropdown */
+        .navbar .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        /*  Keep Hover Menu Above Everything */
+        .navbar .dropdown-menu {
+            z-index: 1050;
+        }
+
+        /*  Fade Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+.counters {
+        background: #f8f9fa; /* Light background */
+        padding: 50px 0;
+    }
+    .counter-box {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .counter-box:hover {
+        transform: translateY(-5px);
+    }
+    .counter-box i {
+        font-size: 40px;
+        color: #007bff;
+        margin-bottom: 10px;
+    }
+    .counter {
+        font-size: 40px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    h5 {
+        font-size: 18px;
+        font-weight: 500;
+        color: #555;
+    }
+
+    .bg-custom {
+            background-image: url('assets/img/Price/price1.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 300px;
+        }
+
+        /* Margin Top for Navbar */
+        .section-margin {
+            margin-top: 80px; /* Adjust based on navbar height */
+        }
+     
+        .author-img img {
+    width: 80px; /* Adjust as needed */
+    height: 80px; /* Adjust as needed */
+    object-fit: cover; /* Ensures the image is cropped properly */
+    border-radius: 50%; /* Makes it circular */
+    }
+
+         /* Navbar links default style */
+        .navbar-nav .nav-link,
+        .navbar-nav .nav-link.active {
+            color: black !important; /* Default text color */
+            font-weight: bold; /* Make text bold */
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Navbar links hover effect */
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active:hover {
+            color: blue !important; /* Hover text color */
+        }
+
+        /* Dropdown menu background */
+        .dropdown-menu {
+            background-color: #5764ec !important; /* Light gray background */
+            border: none; /* Optional: remove border */
+        }
+
+        /* Dropdown items default style */
+        .dropdown-menu .dropdown-item {
+            color: black !important; /* Default text color */
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        /* Dropdown items hover effect */
+        .dropdown-menu .dropdown-item:hover {
+            color: rgb(10, 10, 10) !important; /* Change text color on hover */
+            background-color: #e0e0e0 !important; /* Light gray background on hover */
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar start-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+        <div class="container" >
+            <a class="navbar-brand js-scroll" href="index.html">
+                <img src="assets/img/iflex logo/logo.png" class="black-logo" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarDefault">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about-us.html">About Us</a></li>
+
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="services1.html">Website Development</a></li>
+                            <li><a class="dropdown-item" href="services2.html">Website Design</a></li>
+                            <li><a class="dropdown-item" href="services3.html">Mobile App Development</a></li>
+                            <li><a class="dropdown-item" href="services4.html">Digital Marketing</a></li>
+                            <li><a class="dropdown-item" href="services5.html">Web Hosting</a></li>
+							
+                        </ul>
+                    </li>
+					<!-- Pricing Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="pricingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Pricing</a>
+                        <ul class="dropdown-menu" aria-labelledby="pricingDropdown">
+                            <li><a class="dropdown-item" href="pricing1.html">SEO Package</a></li>
+                            <li><a class="dropdown-item" href="pricing2.html">SMO Package</a></li>
+                            <li><a class="dropdown-item" href="pricing3.html">Design/Development Packages</a></li>
+                            
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
+
+					<!-- Support Dropdown -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle active" href="#" id="supportDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Support</a>
+						<ul class="dropdown-menu" aria-labelledby="supportDropdown">
+							<li><a class="dropdown-item" href="support1.html">Salesforce Support & Services</a></li>
+							<li><a class="dropdown-item" href="support2.html">Web Hosting Support & Services</a></li>
+							<li><a class="dropdown-item" href="support3.html">Web Development Support/Services</a></li>
+							<li><a class="dropdown-item" href="support4.html">Data Migration Support</a></li>
+							<li><a class="dropdown-item" href="support5.html">Cloud Support (AWS, Azure, Google Cloud)</a></li>
+							<li><a class="dropdown-item" href="support6.html">API Integration Support</a></li>
+							<li><a class="dropdown-item" href="support7.html">CMS Support Services</a></li>
+						</ul>
+					</li>
+
+                    <li class="nav-item"><a class="nav-link js-scroll" href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ <!-- Navbar End-->
+  
+    <!-- Start Home Section -->
+     
+    <section class="section-margin">
+        <div class="container-fluid">
+            <div class="row justify-content-evenly text-center overflow-hidden" style="height: 300px;">
+                <div class="col-md text-white d-flex flex-column align-items-center justify-content-center rounded-4 p-4 bg-custom">
+                    <h1 class="fw-bold text-white">SEO Packages</h1>
+                    <nav class="mt-2">
+                        <a href="index.html" class="text-white">Home</a> > 
+                        <a class="active text-white" href="#">SEO Packages</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- End Home Section -->
+
+    <!-- Start About Section -->
+    <section id="about" class="about-area section-padding">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+               
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="about-content">
+                        <div class="about-content-text">
+                            <h2>SEO Package</h2> 
+                            <h4>Maximize Your Search Engine Visibility</h4>
+                            <p>Our SEO package is designed to enhance your website’s ranking and drive organic traffic. We implement cutting-edge strategies to help your business gain online prominence.</p>
+                            <a class="button" href="#">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="feature fw-bold m-3">
+                        <h2>Key Features:</h2>
+                        <ul>
+                            <li><i class="bi bi-arrow-return-right"></i>In-depth website audit & technical SEO improvements</li>
+                            <li><i class="bi bi-arrow-return-right"></i>Extensive keyword research & strategy</li>
+                            <li><i class="bi bi-arrow-return-right"></i>On-page & off-page SEO optimization</li>
+                            <li><i class="bi bi-arrow-return-right"></i>High-quality backlink building & link outreach</li>
+                            <li><i class="bi bi-arrow-return-right"></i>Competitor analysis & performance benchmarking</li>
+                            <li><i class="bi bi-arrow-return-right"></i>Content optimization & SEO-friendly blogging</li>
+                            <li><i class="bi bi-arrow-return-right"></i>Local SEO strategies for enhanced visibility</li>
+                            <li><i class="bi bi-arrow-return-right"></i>Monthly analytics reports with growth insights</li>
+                        </ul>
+                    </div>
+
+                    <div class="list-group mt-3">
+                        
+                         <h2><a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Why Choose Our SEO Package?</a></h2>
+                         <a href="#" class="list-group-item list-group-item-action list-group-item-primary"><i class="bi bi-caret-right-square-fill"></i> Proven track record of successful rankings</a>
+                         <a href="#" class="list-group-item list-group-item-action list-group-item-success"><i class="bi bi-caret-right-square-fill"></i> Customized SEO strategies tailored to your business</a>
+                         <a href="#" class="list-group-item list-group-item-action list-group-item-danger"><i class="bi bi-caret-right-square-fill"></i> Ethical, white-hat SEO techniques</a>
+                         <a href="#" class="list-group-item list-group-item-action list-group-item-warning"><i class="bi bi-caret-right-square-fill"></i> Transparent reporting & dedicated support</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 price-item">
+					<div class="pricing-content">
+						<div class="price-heading">
+							<div class="price-name">
+								<h3>SEO Package</h3>
+								<h6>Optimize your website for search engines</h6>
+								<span class="price-small-text">$</span>
+								<h2>199</h2>
+								<span class="price-small-text">/ per month</span>
+							</div>
+						</div>
+						<div class="price-btn"> <a href="#" class="button price-button-1">Get Started</a> </div>
+						<div class="price-body">
+							<ul>
+								<li><i class="fa fa-check-circle"></i> Comprehensive website audit</li>
+								<li><i class="fa fa-check-circle"></i> Keyword research & optimization</li>
+								<li><i class="fa fa-check-circle"></i> On-page & off-page SEO</li>
+								<li><i class="fa fa-check-circle"></i> Monthly performance reports</li>
+								<li><i class="fa fa-check-circle"></i> Competitor analysis</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+               
+            </div>
+        </div>
+    </section>
+        <!-- End About Section -->
+
+        
+
+   
+
+    
+
+   
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer-area">
+        <div class="footer-top-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-box-item">
+                        <div class="footer-content">
+                            <img src="assets/img/iflex logo/logo.png" alt="Brand">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <ul class="footer-social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-box-item">
+                        <div class="footer-content mid-content">
+                            <h3>Useful Links</h3>
+                            <ul class="footer-link">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="Contact.html">Contact Us</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-box-item">
+                        <div class="footer-content">
+                            <h3>Contact Us</h3>
+                            <ul class="footer-link">
+                                <li><i class="fa fa-phone"></i><a href="tel:503777505">+001 503 777 505</a></li>
+                                <li><i class="fa fa-envelope"></i><a href="mailto:contact@example.com">info@iflexinfosolution.com</a></li>
+                                <li><i class="fa fa-home"></i> CA 560 Bush St & 20th Ave, Canada.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <!-- Back to Top -->
+    <div class="back-to-top">
+        <i class="fa fa-caret-up"></i><i class="fa fa-caret-up"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Bootstrap JS (CDN Only) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- jQuery (Required) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".testimonial-slide").owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+           
+            responsive:{
+                0:{ items:1 },
+                600:{ items:1 },
+                1000:{ items:2 }
+            }
+        });
+    });
+</script>
+<!-- Include Confetti.js -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.3"></script>
+<script>
+    function fireworksEffect() {
+        confetti({
+            particleCount: 100,
+            spread: 160,
+            origin: { y: 0.7 }
+        });
+    }
+</script>
+
+ <!-- Fix Dropdowns on Hover -->
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var dropdowns = document.querySelectorAll('.dropdown-toggle');
+        dropdowns.forEach(function (dropdown) {
+            new bootstrap.Dropdown(dropdown);
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const counters = document.querySelectorAll('.counter');
+        const speed = 100; // Lower = faster
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    });
+</script>
+</body>
+</html>

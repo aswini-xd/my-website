@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Satori - IT Startup & Business Service HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Satori - IT Startup & Business Service HTML Template">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Bootstrap CSS (Latest CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    
+
+    <style>
+        /* Fixes Dropdown Visibility */
+        .navbar .dropdown-menu {
+            z-index: 1050 !important;
+            position: absolute !important;
+            display: none;
+        }
+
+        .navbar .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /*  Fixes Overflow Issue */
+        .container, .row, .col-md {
+            overflow: visible !important;
+        }
+        .bg-custom {
+        background-image: url('assets/img/image/BG.jpg');
+        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;  /* Ensure it spans full width */
+    height: 300px; /* Match your row height */
+}
+.bg-custom {
+            background-image: url('assets/img/image/BG.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 300px;
+        }
+
+        /* Margin Top for Navbar */
+        .section-margin {
+            margin-top: 80px; /* Adjust based on navbar height */
+        }
+
+       /* Navbar links default style */
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active {
+    color: black !important; /* Default text color */
+    font-weight: bold; /* Make text bold */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Navbar links hover effect */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active:hover {
+    color: blue !important; /* Hover text color */
+}
+
+/* Dropdown menu background */
+.dropdown-menu {
+    background-color: #5764ec !important; /* Light gray background */
+    border: none; /* Optional: remove border */
+}
+
+/* Dropdown items default style */
+.dropdown-menu .dropdown-item {
+    color: black !important; /* Default text color */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Dropdown items hover effect */
+.dropdown-menu .dropdown-item:hover {
+    color: rgb(10, 10, 10) !important; /* Change text color on hover */
+    background-color: #e0e0e0 !important; /* Light gray background on hover */
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand js-scroll" href="index.html">
+                <img src="assets/img/iflex logo/logo.png" class="black-logo" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault"
+                aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarDefault">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about-us.html">About Us</a></li>
+
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="services1.html">Website Development</a></li>
+                            <li><a class="dropdown-item" href="services2.html">Website Design</a></li>
+                            <li><a class="dropdown-item" href="services3.html">Mobile App Development</a></li>
+                            <li><a class="dropdown-item" href="services4.html">Digital Marketing</a></li>
+                            <li><a class="dropdown-item" href="services5.html">Web Hosting</a></li>
+							
+                        </ul>
+                    </li>
+
+                    <!--  Pricing Dropdown  -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="pricingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Pricing</a>
+                        <ul class="dropdown-menu" aria-labelledby="pricingDropdown">
+                            <li><a class="dropdown-item" href="pricing1.html">SEO Package</a></li>
+                            <li><a class="dropdown-item" href="pricing2.html">SMO Package</a></li>
+                            <li><a class="dropdown-item" href="pricing3.html">Design/Development Packages</a></li>
+                            
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
+
+                    <!-- Support Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="supportDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Support</a>
+                        <ul class="dropdown-menu" aria-labelledby="supportDropdown">
+                            <li><a class="dropdown-item" href="support1.html">Salesforce Support & Services</a></li>
+                            <li><a class="dropdown-item" href="support2.html">Web Hosting Support & Services</a></li>
+                            <li><a class="dropdown-item" href="support3.html">Web Development Support/Services</a></li>
+                            <li><a class="dropdown-item" href="support4.html">Data Migration Support</a></li>
+                            <li><a class="dropdown-item" href="support5.html">Cloud Support (AWS, Azure, Google Cloud)</a></li>
+                            <li><a class="dropdown-item" href="support6.html">API Integration Support</a></li>
+                            <li><a class="dropdown-item" href="support7.html">CMS Support Services</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link js-scroll" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Start Home Section -->
+    <section class="section-margin">
+        <div class="container-fluid">
+            <div class="row justify-content-evenly text-center overflow-hidden" style="height: 300px;">
+                <div class="col-md text-white d-flex flex-column align-items-center justify-content-center rounded-4 p-4 bg-custom">
+                    <h1 class="fw-bold text-white">Contact</h1>
+                    <nav class="mt-2">
+                        <a href="index.html" class="text-white">Home</a> > 
+                        <a class="active text-white" href="#">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Home Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-area section-padding">
+        <div class="container">
+            <section id="contact" class="contact-area section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="section-title">
+                                <h5>Get In Touch</h5>
+                                <h2>Contact us</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 col-md-12">
+                            <div class="row contact-information">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="contact-info-title">
+                                        <h3>Contact Info</h3>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="contact-details">
+                                        <h6>Phone:</h6>
+                                        <p>Office: +1 (347) 580-4781</p>
+                                        <p>Mobile: +1(347) 704-4702</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="contact-details">
+                                        <h6>Email:</h6>
+                                        <p>info@iflexinfosolution.com</p>
+                                        <p>support@iflexinfosolution.com</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="contact-details">
+                                        <h6>Address:</h6>
+                                        <p>1260 Howard St, Elk Grove Village, IL 60007.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-12">
+                            <p class="form-message"></p><br />
+                            <form class="contact-form form" id="contact-form" action="https://cutesolution.com/tf/satori/Satori/mail.php" method="POST">
+                                <div class="controls">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group has-error has-danger">
+                                                <input id="form_name" type="text" name="name" placeholder="Your Name" required="required" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group has-error has-danger">
+                                                <input id="form_email" type="email" name="email" placeholder="Your Email" required="required" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group has-error has-danger">
+                                                <input id="form_subject" type="text" name="subject" placeholder="Your Subject" required="required" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea id="form_message" name="message" placeholder="Your Message" rows="4" required="required"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button type="submit" class="button">Send Message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 mt-5">
+                            <div class="col">
+                                <div class="map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2682.4968673695303!2d-87.97057102443245!3d42.01625035675401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fb10157120bf1%3A0xf9571aa02a22e389!2s1260%20Howard%20St%2C%20Elk%20Grove%20Village%2C%20IL%2060007%2C%20USA!5e1!3m2!1sen!2sin!4v1742995393379!5m2!1sen!2sin" style="width: 100%;" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+      <!--End Contact Section -->
+
+      <!-- Start Footer Section -->
+	<footer class="footer-area">
+		<div class="footer-top-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 footer-box-item">
+						<div class="footer-content">
+							<img src="assets/img/iflex logo/logo.png" alt="Brand">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim.</p>
+							<ul class="footer-social">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 footer-box-item">
+						<div class="footer-content mid-content">
+							<h3>Usefull Link</h3>
+							<ul class="footer-link">
+								<li><a href="about-us.html">About Us</a></li>
+								<li><a href="Contact.html">Contact Us</a></li>
+								<li><a href="#">Terms & Condition</a></li>
+								<li><a href="#">Privecy Policy</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 footer-box-item">
+						<div class="footer-content">
+							<h3>Contact Us</h3>
+							<ul class="footer-link">
+								<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:503777505">+001 503 777 505</a></li>
+								<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:demo@example.com">info@iflexinfosolution.com</a></li>
+								<li><i class="fa fa-home" aria-hidden="true"></i> CA 560 Bush St & 20th Ave, Canada.</li>
+							</ul>
+							<div class="subscribe-form-wrap">
+								<form action="#" class="subscribe-form">
+									<input type="email" name="email" class="form-input" placeholder="Enter Email">
+									<button type="submit" class="submit-btn">Subscribe</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="footer-copyright text-center">
+							<p>Aswini © 2025</p>
+							<p>Designed by Aswini Developer.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+<!-- End Footer Section -->
+    <!--  Updated Bootstrap & JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--  Manually Initialize Dropdowns (Fix) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var dropdowns = document.querySelectorAll('.dropdown-toggle');
+            dropdowns.forEach(function (dropdown) {
+                new bootstrap.Dropdown(dropdown);
+            });
+        });
+    </script>
+
+</body>
+</html>

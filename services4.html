@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Satori - IT Startup & Business Service HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Satori - IT Startup & Business Service HTML Template">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Bootstrap CSS (Only CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    
+    <style>
+        /*  Enable Hover Dropdown */
+        .navbar .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        /*  Keep Hover Menu Above Everything */
+        .navbar .dropdown-menu {
+            z-index: 1050;
+        }
+
+        /*  Fade Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+.counters {
+        background: #f8f9fa; /* Light background */
+        padding: 50px 0;
+    }
+    .counter-box {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .counter-box:hover {
+        transform: translateY(-5px);
+    }
+    .counter-box i {
+        font-size: 40px;
+        color: #007bff;
+        margin-bottom: 10px;
+    }
+    .counter {
+        font-size: 40px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    h5 {
+        font-size: 18px;
+        font-weight: 500;
+        color: #555;
+    }
+
+    .bg-custom {
+            background-image: url('assets/img/image/digital_marketing.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 300px;
+        }
+
+        /* Margin Top for Navbar */
+        .section-margin {
+            margin-top: 80px; /* Adjust based on navbar height */
+        }
+                    /* Navbar links default style */
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active {
+    color: black !important; /* Default text color */
+    font-weight: bold; /* Make text bold */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Navbar links hover effect */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active:hover {
+    color: blue !important; /* Hover text color */
+}
+
+/* Dropdown menu background */
+.dropdown-menu {
+    background-color: #5764ec !important; /* Light gray background */
+    border: none; /* Optional: remove border */
+}
+
+/* Dropdown items default style */
+.dropdown-menu .dropdown-item {
+    color: black !important; /* Default text color */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Dropdown items hover effect */
+.dropdown-menu .dropdown-item:hover {
+    color: rgb(10, 10, 10) !important; /* Change text color on hover */
+    background-color: #e0e0e0 !important; /* Light gray background on hover */
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar start-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+        <div class="container" >
+            <a class="navbar-brand js-scroll" href="index.html">
+                <img src="assets/img/iflex logo/logo.png" class="black-logo" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarDefault">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about-us.html">About Us</a></li>
+
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="services1.html">Website Development</a></li>
+                            <li><a class="dropdown-item" href="services2.html">Website Design</a></li>
+                            <li><a class="dropdown-item" href="services3.html">Mobile App Development</a></li>
+                            <li><a class="dropdown-item" href="services4.html">Digital Marketing</a></li>
+                            <li><a class="dropdown-item" href="services5.html">Web Hosting</a></li>
+							
+                        </ul>
+                    </li>
+					<!-- Pricing Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="pricingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Pricing</a>
+                        <ul class="dropdown-menu" aria-labelledby="pricingDropdown">
+                            <li><a class="dropdown-item" href="pricing1.html">SEO Package</a></li>
+                            <li><a class="dropdown-item" href="pricing2.html">SMO Package</a></li>
+                            <li><a class="dropdown-item" href="pricing3.html">Design/Development Packages</a></li>
+                            
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
+
+					<!-- Support Dropdown -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle active" href="#" id="supportDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Support</a>
+						<ul class="dropdown-menu" aria-labelledby="supportDropdown">
+							<li><a class="dropdown-item" href="support1.html">Salesforce Support & Services</a></li>
+							<li><a class="dropdown-item" href="support2.html">Web Hosting Support & Services</a></li>
+							<li><a class="dropdown-item" href="support3.html">Web Development Support/Services</a></li>
+							<li><a class="dropdown-item" href="support4.html">Data Migration Support</a></li>
+							<li><a class="dropdown-item" href="support5.html">Cloud Support (AWS, Azure, Google Cloud)</a></li>
+							<li><a class="dropdown-item" href="support6.html">API Integration Support</a></li>
+							<li><a class="dropdown-item" href="support7.html">CMS Support Services</a></li>
+						</ul>
+					</li>
+
+                    <li class="nav-item"><a class="nav-link js-scroll" href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ <!-- Navbar End-->
+  
+    <!-- Start Home Section -->
+     
+    <section class="section-margin">
+        <div class="container-fluid">
+            <div class="row justify-content-evenly text-center overflow-hidden" style="height: 300px;">
+                <div class="col-md text-white d-flex flex-column align-items-center justify-content-center rounded-4 p-4 bg-custom">
+                    <h1 class="fw-bold text-white">Digital Marketing</h1>
+                    <nav class="mt-2">
+                        <a href="index.html" class="text-white">Home</a> > 
+                        <a class="active text-white" href="#">Digital Marketing</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- End Home Section -->
+
+    <!-- Start About Section -->
+    <section id="about" class="about-area section-padding">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="about-image-wrapper">
+                        <img src="assets/img/image/digital_marketing-2.png" alt="digital-marketing image">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="about-content">
+                        <div class="about-content-text">
+                            <h2>Digital Marketing</h2> 
+                            <h4>Grow Your Business with Data-Driven Digital Marketing</h4>
+                            <p>In today’s competitive digital landscape, data-driven marketing is the key to success. At IFLEXSOLUTIONS, we use advanced analytics, market insights, and cutting-edge strategies to help businesses grow, attract more customers, and maximize their return on investment (ROI).</p>
+                            <p>Our expert team specializes in SEO, PPC, Social Media Marketing, Content Marketing, and Web Design, ensuring that every decision is backed by real data and industry trends. Whether you're looking to increase website traffic, improve brand awareness, or boost conversions, our tailored digital marketing solutions will help you achieve your goals.</p>
+                            <a class="button" href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!-- End About Section -->
+
+       <!--How Does SEO Work start-->
+       <section class="container mt-4 mb-4 ">
+        <div class="row justify-content-evenly text-center ">
+            <h2 class="fw-bold text-info">Our Services</h2>
+            
+            <div class="col-md-3   mt-3" >
+                <h1><i class="bi bi-graph-up-arrow text-danger"></i></h1>
+                <h5 class="fw-bold text-black">Search Engine Optimization (SEO)</h5>
+                <p>SEO helps improve your website’s visibility on search engines like Google, driving organic traffic through optimized content, keywords, and technical improvements.</p>
+
+            </div>
+            <div class="col-md-3 mt-3">
+                <h1><i class="bi bi-coin text-primary"></i></h1>
+                <h5 class="fw-bold text-black"> Pay-Per-Click Advertising</h5>
+                <p>PPC Maximize Your ROI with Targeted Pay-Per-Click Advertising! Reach the right audience at the right time with high-converting PPC campaigns. Drive instant traffic, boost sales, and grow your business with data-driven ad strategies!</p>
+
+            </div>
+            <div class="col-md-3   mt-3">
+                <h1><i class="bi bi-phone-flip text-info"></i></h1>
+                <h5 class="fw-bold text-black">Social Media Marketing</h5>
+                <p>SMM Transform your brand’s online presence with powerful Social Media Marketing! Engage, grow, and convert your audience with strategic content, targeted ads, and data-driven campaigns..</p>
+
+            </div>
+           
+        </div>
+
+        <div class="row justify-content-evenly text-center ">
+            <div class="col-md-3 mt-3" >
+                <h1><i class="bi bi-envelope-at-fill text-warning"></i></h1>
+                <h5 class="fw-bold text-black">Email Marketing</h5>
+                <p>Engage your audience with personalized, high-converting email campaigns that drive sales and build lasting customer relationships. Let’s turn your emails into revenue! </p>
+
+            </div>
+            <div class="col-md-3  mt-3">
+                <h1><i class="bi bi-file-earmark-code-fill text-secondary"></i></h1>
+                <h5 class="fw-bold text-black"> Web Design & Development</h5>
+                <p>Transform your online presence with stunning, fast, and user-friendly websites. Our expert web design & development services ensure a seamless experience that drives engagement and conversions!</p>
+
+            </div>
+            <div class="col-md-3  mt-3">
+                <h1><i class="bi bi-pencil-fill text-success"></i></h1>
+                <h5 class="fw-bold text-black">Content Marketing</h5>
+                <p>The backbone of any marketing campaign is compelling content and our team of creatives, including writers, designers & developers have helped many brands get talked about in mainstream media.</p>
+
+            </div>
+           
+        </div>
+       
+    </section>
+
+         <!--How Does SEO Work end-->
+
+         <!-- Start Team Section -->
+	<section id="team" class="team-area section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title">
+						<h5>Meet Our Team</h5>
+						<h2>Our Experts</h2>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-team-box">
+						<div class="team-image">
+							<img src="assets/img/seo-team/team-1.jpg" alt="team" />
+							<div class="team-social-icon">
+								<a href="#" class="social-color-1"><i class="fa fa-facebook-f"></i></a>
+								<a href="#" class="social-color-2"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="social-color-3"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="team-info">
+							<h3>Michael Carter</h3>
+							<span>Head of SEO Strategy</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-team-box">
+						<div class="team-image">
+							<img src="assets/img/seo-team/team-2.jpg" alt="team" />
+							<div class="team-social-icon">
+								<a href="#" class="social-color-1"><i class="fa fa-facebook-f"></i></a>
+								<a href="#" class="social-color-2"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="social-color-3"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="team-info">
+							<h3>Sophia Williams</h3>
+							<span>Technical SEO Specialist</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-team-box">
+						<div class="team-image">
+							<img src="assets/img/seo-team/team-3.jpg" alt="team" />
+							<div class="team-social-icon">
+								<a href="#" class="social-color-1"><i class="fa fa-facebook-f"></i></a>
+								<a href="#" class="social-color-2"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="social-color-3"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="team-info">
+							<h3>Daniel Roberts</h3>
+							<span>Social Media Manager</span>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="row">
+				
+				<div class="col-lg-4 col-md-6">
+					<div class="single-team-box">
+						<div class="team-image">
+							<img src="assets/img/seo-team/team-4.jpg" alt="team" />
+							<div class="team-social-icon">
+								<a href="#" class="social-color-1"><i class="fa fa-facebook-f"></i></a>
+								<a href="#" class="social-color-2"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="social-color-3"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="team-info">
+							<h3>Emma Johnson</h3>
+							<span>Link Building Specialist</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-team-box">
+						<div class="team-image">
+							<img src="assets/img/seo-team/team-5.jpg" alt="team" />
+							<div class="team-social-icon">
+								<a href="#" class="social-color-1"><i class="fa fa-facebook-f"></i></a>
+								<a href="#" class="social-color-2"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="social-color-3"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="team-info">
+							<h3>Liam Anderson</h3>
+							<span>SEO Analyst</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-team-box">
+						<div class="team-image">
+							<img src="assets/img/seo-team/team-6.jpg" alt="team" />
+							<div class="team-social-icon">
+								<a href="#" class="social-color-1"><i class="fa fa-facebook-f"></i></a>
+								<a href="#" class="social-color-2"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="social-color-3"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="team-info">
+							<h3>James Mitchell</h3>
+							<span> Graphic Designer</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Team Section -->
+
+         <!-- Faq Section -->
+        <section class="container">
+            <div class="row justify-content-evenly pt-2 pb-3">
+                <div class="col-md-10 border" style="background-color: aqua;">
+                    
+                        <h3 class="text-center fw-bold">FAQ</h3>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    What is digital marketing, and why is it important?
+                                </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Digital marketing is the promotion of products or services using online channels like SEO, social media, email, and paid ads. It’s important because it helps businesses reach a larger audience, increase brand awareness, and drive sales cost-effectively.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    How long does it take to see results from digital marketing?
+                                </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">The timeline varies depending on the strategy. SEO can take 3-6 months for noticeable results, while PPC and social media ads can generate traffic and leads almost immediately.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Which digital marketing strategy is best for my business?
+                                </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">The best strategy depends on your goals, industry, and target audience. A mix of SEO, PPC, social media, and content marketing often delivers the best results</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                    How much does digital marketing cost?
+                                </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Costs vary based on services, ad budgets, and business needs. SEO and content marketing may have ongoing costs, while PPC requires a flexible ad budget. We offer customized plans to fit your budget.</div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- End Faq Section -->
+     
+        
+        
+    </section>
+   
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer-area">
+        <div class="footer-top-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-box-item">
+                        <div class="footer-content">
+                            <img src="assets/img/iflex logo/logo.png" alt="Brand">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <ul class="footer-social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-box-item">
+                        <div class="footer-content mid-content">
+                            <h3>Useful Links</h3>
+                            <ul class="footer-link">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="Contact.html">Contact Us</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-box-item">
+                        <div class="footer-content">
+                            <h3>Contact Us</h3>
+                            <ul class="footer-link">
+                                <li><i class="fa fa-phone"></i><a href="tel:503777505">+001 503 777 505</a></li>
+                                <li><i class="fa fa-envelope"></i><a href="mailto:contact@example.com">info@iflexinfosolution.com</a></li>
+                                <li><i class="fa fa-home"></i> CA 560 Bush St & 20th Ave, Canada.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <!-- Back to Top -->
+    <div class="back-to-top">
+        <i class="fa fa-caret-up"></i><i class="fa fa-caret-up"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Bootstrap JS (CDN Only) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+ <!-- Fix Dropdowns on Hover -->
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var dropdowns = document.querySelectorAll('.dropdown-toggle');
+        dropdowns.forEach(function (dropdown) {
+            new bootstrap.Dropdown(dropdown);
+        });
+    });
+</script>
+
+</script>
+</body>
+</html>
